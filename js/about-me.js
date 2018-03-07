@@ -99,4 +99,4 @@ while (q5Done === false) {
 }
 
 alert('Thank you for visiting my page! Your final score: ' + score + '\nGoodbye!');
-console.log('Player earned a final score of ' + score + '.' + '\nThis conclude the JavaScript portion.');
+console.log('Player earned a final score of ' + score + '.' + '\nThis concludes the JavaScript portion.');
