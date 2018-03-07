@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+    background-color: powderblue;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: Arial;
+    line-height: 50px;
+}
+
+p {
+    line-height: 30px;
+}
+
+li {
+    line-height: 20px;
+}
