@@ -106,27 +106,25 @@ console.log('Current score: ' + score);
 
 // sixth question
 var qDone = false;
-
 for (var i = 0; i < 4 && (qDone === false); i++) {
     var guessTotalCousins = prompt('How many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100) You have ' + (4 - i) + ' attempt(s) remaining. for this question.');
     while (isNaN(guessTotalCousins)) {
-        guessTotalCousins = prompt('Invalid input. We will give you a chance to input an integer before docking attempts.\nHow many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100) You have ' + (6 - i) + ' attempt(s) remaining. for this question.');
+        guessTotalCousins = prompt('Invalid input. We will give you a chance to input an integer before docking attempts.\nHow many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100) You have ' + (4 - i) + ' attempt(s) remaining. for this question.');
     }
-
     var intGuessTotalCousins = parseInt(guessTotalCousins);
     console.log('User input: ' + guessTotalCousins);
     if (intGuessTotalCousins < 0) {
         alert('Sorry, but that\'s not how the world works. You can\'t have less than 0 cousins!');
-        console.log('Answer is incorrect. Loop while continue.');
+        console.log('Answer is incorrect. Loop will continue.');
     } else if (intGuessTotalCousins === 1) {
         alert('That is incorrect! Your guess is too low.');
-        console.log('Answer is incorrect. Loop while continue.');
+        console.log('Answer is incorrect. Loop will continue.');
     } else if (intGuessTotalCousins > 2) {
         alert('That is incorrect! Your guess is too high.');
-        console.log('Answer is incorrect. Loop while continue.');
+        console.log('Answer is incorrect. Loop will continue.');
     } else if (intGuessTotalCousins === 2) {
         alert('That is correct! I have 2 (two) cousins living in Washington.');
-        console.log('Answer is correct. Incrementing score variable and exit');
+        console.log('Answer is correct. Incrementing score variable and exit loop.');
         qDone = true;
         console.log(qDone);
         score++;
@@ -134,6 +132,34 @@ for (var i = 0; i < 4 && (qDone === false); i++) {
 }
 console.log('Current score: ' + score);
 
+// seventh question
+var qDone = false;
+var visitedStates = ["Oregon", "California", "Nevada", "New York", "South Carolina", "Florida", "Hawaii"];
+
+/* Creating a new array and then turning each element to lower case. The lower case names are then pushed into the array. See README for code source */
+var lowerCaseVisitedStates = [];
+for (i = 0; i < visitedStates.length; i++) {
+    lowerCaseVisitedStates.push(visitedStates[i].toLowerCase());
+}
+console.log(lowerCaseVisitedStates);
+
+for (var i = 0; i < 6 && (qDone === false); i++) {
+    var guessVisitedState = prompt('Can you guess a state that I have lived in besides Washington and Alaska? You have ' + (6 - i) + ' attempt(s) remaining for this question.');
+    var lowerCaseGuessVisitedState = guessVisitedState.toLowerCase();
+    console.log(lowerCaseGuessVisitedState);
+    var guessInt = lowerCaseVisitedStates.indexOf(lowerCaseGuessVisitedState);
+    console.log(guessInt);
+    if (guessInt === -1) {
+        alert('That was incorrect. Please try again!"');
+    }
+    else if (guessInt > -1) {
+        alert('That was correct! Possible answers were the following: ' + visitedStates.join(', ') + '.');
+        qDone = true;
+        score++;
+    }
+}
+console.log(score);
+
 // total
 alert('Thank you for visiting my page! Your final score: ' + score + '\nGoodbye!');
-console.log('Player earned a final score of ' + score + '.' + '\nThis concludes the JavaScript portion.');
+console.log('Player earned a final score of ' + score + ' out of 7.' + '\nThis concludes the JavaScript portion.');

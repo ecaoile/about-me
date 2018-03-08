@@ -6,7 +6,7 @@ body {
 h1 {
     font-size: 30px;
     font-family: Arial;
-    line-height: 50px;
+    line-height: 70px;
 }
 
 p {
@@ -15,4 +15,10 @@ p {
 
 li {
     line-height: 20px;
+}
+
+.border {
+    border: double;
+    width:20%;
+    margin: 3% 40%;
 }
