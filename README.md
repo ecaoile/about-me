@@ -10,3 +10,7 @@ Code for lowercase array was taken from following URL: https://stackoverflow.com
 
 Idea for CSS box was taken from the following URL:
 https://www.w3schools.com/css/css_boxmodel.asp
+
+030818
+
+pair programming with Harry was good. turned questions into functions.
