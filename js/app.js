@@ -102,6 +102,38 @@ while (qDone === false) {
         alert('That is not a valid input. Please try again.');
     }
 }
+console.log('Current score: ' + score);
 
+// sixth question
+var qDone = false;
+
+for (var i = 0; i < 4 && (qDone === false); i++) {
+    var guessTotalCousins = prompt('How many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100) You have ' + (4 - i) + ' attempt(s) remaining. for this question.');
+    while (isNaN(guessTotalCousins)) {
+        guessTotalCousins = prompt('Invalid input. We will give you a chance to input an integer before docking attempts.\nHow many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100) You have ' + (6 - i) + ' attempt(s) remaining. for this question.');
+    }
+
+    var intGuessTotalCousins = parseInt(guessTotalCousins);
+    console.log('User input: ' + guessTotalCousins);
+    if (intGuessTotalCousins < 0) {
+        alert('Sorry, but that\'s not how the world works. You can\'t have less than 0 cousins!');
+        console.log('Answer is incorrect. Loop while continue.');
+    } else if (intGuessTotalCousins === 1) {
+        alert('That is incorrect! Your guess is too low.');
+        console.log('Answer is incorrect. Loop while continue.');
+    } else if (intGuessTotalCousins > 2) {
+        alert('That is incorrect! Your guess is too high.');
+        console.log('Answer is incorrect. Loop while continue.');
+    } else if (intGuessTotalCousins === 2) {
+        alert('That is correct! I have 2 (two) cousins living in Washington.');
+        console.log('Answer is correct. Incrementing score variable and exit');
+        qDone = true;
+        console.log(qDone);
+        score++;
+    }
+}
+console.log('Current score: ' + score);
+
+// total
 alert('Thank you for visiting my page! Your final score: ' + score + '\nGoodbye!');
 console.log('Player earned a final score of ' + score + '.' + '\nThis concludes the JavaScript portion.');
