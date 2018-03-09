@@ -1,5 +1,4 @@
 body {
-    text-align: center;
     background-color: powderblue;
 }
 
@@ -7,27 +6,36 @@ h1 {
     font-size: 30px;
     font-family: Arial;
     line-height: 70px;
+    text-align: center;
 }
 
-p {
+p.centered {
     line-height: 30px;
+    text-align: center;
 }
 
 li {
     line-height: 20px;
 }
 
-.border {
-    border: double;
-    width:20%;
-    margin: 3% 40%;
+ol.numbered {
+  list-style-type: decimal;
+  margin-left: 30px;
+
+}
+
+ul.bullets {
+    margin-top: 1%;
+    margin-left: 42.5%;
+    list-style-type: disc;
+
 }
 
 section {
   width: 250px;
   border: 1px solid black;
   position: relative;
-  margin-left: 20px;
   top: 70px;
+  margin-left: 20px;  
 }
 
