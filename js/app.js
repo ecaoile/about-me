@@ -28,8 +28,6 @@ function firstQuestion() {
   console.log('Current score: ' + score);
 }
 
-firstQuestion();
-
 // second question
 function secondQuestion() {
   qDone = false;
@@ -53,9 +51,6 @@ function secondQuestion() {
   }
   console.log('Current score: ' + score);
 }
-
-secondQuestion();
-
 
 // third question
 function thirdQuestion() {
@@ -81,8 +76,6 @@ function thirdQuestion() {
   console.log('Current score: ' + score);
 }
 
-thirdQuestion();
-
 // fourth question
 function fourthQuestion() {
   qDone = false;
@@ -106,8 +99,6 @@ function fourthQuestion() {
   }
   console.log('Current score: ' + score);
 }
-
-fourthQuestion();
 
 // fifth question
 function fifthQuestion() {
@@ -168,8 +159,6 @@ function sixthQuestion() {
   console.log('Current score: ' + score);
 }
 
-sixthQuestion();
-
 // seventh question
 function seventhQuestion() {
   qDone = false;
@@ -188,23 +177,29 @@ function seventhQuestion() {
     console.log(lowerCaseGuessVisitedState);
     var guessInt = lowerCaseVisitedStates.indexOf(lowerCaseGuessVisitedState);
     console.log(guessInt);
-    if (guessInt === -1) {
-      alert('That was incorrect. Please try again!"');
+
+    if (guessVisitedState.length < 1) {
+      alert('You didn\'t enter anything. Please try again!');
+    }
+    else if (guessInt === -1) {
+      alert('That was incorrect. Please try again!');
     }
     else if (guessInt > -1) {
       alert('That was correct! Possible answers were the following: ' + visitedStates.join(', ') + '.');
       qDone = true;
       score++;
     }
-    else {
-      alert('You didn\'t enter anything. Please try again!');
-    }
   }
   console.log(score);
 }
 
+firstQuestion();
+secondQuestion();
+thirdQuestion();
+fourthQuestion();
+fifthQuestion();
+sixthQuestion();
 seventhQuestion();
-
 
 // total
 alert('Thank you for visiting my page! Your final score: ' + score + '\nGoodbye!');
