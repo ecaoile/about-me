@@ -131,7 +131,7 @@ fifthQuestion();
 function sixthQuestion() {
   qDone = false;
   for (var i = 0; i < 4 && (qDone === false); i++) {
-    var guessTotalCousins = prompt('How many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100)? You have ' + (4 - i) + ' attempt(s) remaining. for this question.');
+    var guessTotalCousins = prompt('How many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100)? You have ' + (4 - i) + ' attempt(s) remaining for this question.');
 
     while (guessTotalCousins.length < 1 || isNaN(guessTotalCousins)) {
       guessTotalCousins = prompt('Invalid input. Please try again. We will give you a chance to input an integer before docking attempts.\nHow many of my cousins do you think live in Washington state currently?');
