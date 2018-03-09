@@ -23,7 +23,7 @@ function firstQuestion() {
     } else {
       alert('That is not a valid input. Please try again.');
       console.log('q1Done remains false; therefore, the while loop will repeat the question');
-    } 
+    }
   }
   console.log('Current score: ' + score);
 }
@@ -44,7 +44,7 @@ function secondQuestion() {
     } else if (lowerCaseGuessWeight === 'no' || lowerCaseGuessWeight === 'n') {
       alert('That is incorrect! You are way too kind. I\'m a budding Fatty McFat Fat at slightly over 200 pounds!');
       console.log('Answer is incorrect! Score remains the same.');
-      qDone = true; 
+      qDone = true;
     } else if (lowerCaseGuessWeight.length < 1){
       alert('You didn\'t enter anything. Please try again.');
     } else {
