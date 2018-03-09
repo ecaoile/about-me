@@ -165,7 +165,7 @@ function sixthQuestion() {
       score++;
     }
   }
-console.log('Current score: ' + score);
+  console.log('Current score: ' + score);
 }
 
 sixthQuestion();
@@ -173,7 +173,7 @@ sixthQuestion();
 // seventh question
 function seventhQuestion() {
   qDone = false;
-  var visitedStates = ["Oregon", "California", "Nevada", "New York", "South Carolina", "Florida", "Hawaii"];
+  var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida', 'Hawaii'];
 
   /* Creating a new array and then turning each element to lower case. The lower case names are then pushed into the array. See README for code source */
   var lowerCaseVisitedStates = [];
